@@ -22,7 +22,7 @@
               <a>home</a>
             </router-link>
 
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Hotels
                 <span>
@@ -48,7 +48,7 @@
                   <a href="tour-homepage.html">Tour list</a>
                 </li>
               </ul>
-            </li>
+            </li> -->
 
             <router-link tag="li" exact-active-class="active" :to="{name: 'catalogs'}">
               <a>catalogs</a>
@@ -145,42 +145,54 @@
 <!--            </div>-->
             <!-- end sub-menu -->
 
-            <a class="list-group-item">
+            <a href="/" class="list-group-item">
               <span>
                 <i class="fa fa-home link-icon"></i>
               </span>Home
             </a>
 
-            <a class="list-group-item">
+
+
+            <router-link  exact-active-class="active" :to="{name: 'catalogs'}" class="list-group-item">
               <span>
                 <i class="fa fa-home link-icon"></i>
-              </span>hotels
-            </a>
+              </span>catalogs
+            </router-link>
 
-            <a class="list-group-item">
-              <span>
-                <i class="fa fa-home link-icon"></i>
-              </span>tours
-            </a>
 
-            <a class="list-group-item">
+            <router-link 
+            v-if="!isUserAuthenticated"
+            exact-active-class="active"
+              :to="{name: 'login'}"
+            class="list-group-item">
               <span>
                 <i class="fa fa-home link-icon"></i>
               </span>login
-            </a>
+            </router-link>
 
-            <a class="list-group-item">
+
+
+            <router-link 
+            v-if="!isUserAuthenticated"
+            exact-active-class="active"
+              :to="{name: 'register'}"
+            class="list-group-item">
               <span>
                 <i class="fa fa-home link-icon"></i>
               </span>register
-            </a>
+            </router-link>
 
 
-            <a class="list-group-item">
+            <router-link
+            v-if="isUserAuthenticated"
+            exact-active-class="active"
+              to="user-dashboard/profile"
+              target="_blank"
+             class="list-group-item">
               <span>
                 <i class="fa fa-home link-icon"></i>
-              </span>profile
-            </a>
+              </span>{{ userFullName }} profile
+            </router-link>
 
           </div>
           <!-- end list-group -->

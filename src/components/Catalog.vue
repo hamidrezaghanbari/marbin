@@ -358,64 +358,6 @@
               <!-- end h-list-block -->
 
 
-              <!-- just for test -->
-              <div
-                v-for="catalog in catalogs"
-                :key="catalog.id"
-                class="list-block main-block h-list-block">
-                <div class="list-content">
-                  <div class="main-img list-img h-list-img">
-                    <a href="hotel-detail-right-sidebar.html">
-                      <img :src="catalog.header_image" class="img-responsive" 
-                      :alt="catalog.name" />
-                    </a>
-                    <div class="main-mask">
-                      <ul class="list-unstyled list-inline offer-price-1">
-                        <li class="price">
-                          ${{ catalog.price }}
-                          <span class="divider">|</span>
-                          <span class="pkg">{{ catalog.location_type }}</span>
-                        </li>
-                        <li class="rating">
-                          <span>
-                            <i class="fa fa-star orange"></i>
-                          </span>
-                          <span>
-                            <i class="fa fa-star orange"></i>
-                          </span>
-                          <span>
-                            <i class="fa fa-star orange"></i>
-                          </span>
-                          <span>
-                            <i class="fa fa-star orange"></i>
-                          </span>
-                          <span>
-                            <i class="fa fa-star lightgrey"></i>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- end main-mask -->
-                  </div>
-                  <!-- end h-list-img -->
-
-                  <div class="list-info h-list-info">
-                    <h3 class="block-title">
-                      <a href="hotel-detail-right-sidebar.html">{{ catalog.name }}</a>
-                    </h3>
-                    <p class="block-minor">{{ catalog.id }}</p>
-                    <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
-                    <router-link
-                      :to="{name: 'single_prdocut', params: {id: catalog.id}}"
-                      class="btn btn-orange btn-lg"
-                    >View More</router-link>
-                  </div>
-                  <!-- end h-list-info -->
-                </div>
-              </div>
-              <!-- TODO for list of all items for chevela -->
-              <!-- end just for test -->
-
               <div class="pages">
                 <jw-pagination :pageSize="6" :items="catalogs" @changePage="onChangePage"></jw-pagination>
               </div>
@@ -650,45 +592,7 @@
               </div>
               <!-- end side-bar-block -->
 
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-12">
-                  <div class="side-bar-block main-block ad-block">
-                    <div class="main-img ad-img">
-                      <a href="#">
-                        <img src="../assets/images/car-ad.jpg" class="img-responsive" alt="car-ad" />
-                        <div class="ad-mask">
-                          <div class="ad-text">
-                            <span>Luxury</span>
-                            <h2>Car</h2>
-                            <span>Offer</span>
-                          </div>
-                          <!-- end ad-text -->
-                        </div>
-                        <!-- end columns -->
-                      </a>
-                    </div>
-                    <!-- end ad-img -->
-                  </div>
-                  <!-- end side-bar-block -->
-                </div>
-                <!-- end columns -->
-
-                <div class="col-xs-12 col-sm-6 col-md-12">
-                  <div class="side-bar-block support-block">
-                    <h3>Need Help</h3>
-                    <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum.</p>
-                    <div class="support-contact">
-                      <span>
-                        <i class="fa fa-phone"></i>
-                      </span>
-                      <p>+1 123 1234567</p>
-                    </div>
-                    <!-- end support-contact -->
-                  </div>
-                  <!-- end side-bar-block -->
-                </div>
-                <!-- end columns -->
-              </div>
+             
               <!-- end row -->
             </div>
             <!-- end columns -->

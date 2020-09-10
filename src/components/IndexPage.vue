@@ -286,8 +286,8 @@
           >
             <div class="meta-1">
               <div class="container">
-                <h1>Discover</h1>
-                <h1>Australia</h1>
+                <h1>Marbin</h1>
+                <h1>Site</h1>
               </div>
               <!-- end container -->
             </div>
