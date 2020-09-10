@@ -1,0 +1,13 @@
+.meta-1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+    font-weight: bold;
+}
+
+#search-tabs-1 {
+    bottom: 180px !important;
+}
